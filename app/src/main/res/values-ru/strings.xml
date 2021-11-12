@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">getPARK</string>
+    <string name="menu_my_cars">Мои машины</string>
+    <string name="menu_home">Дом</string>
+    <string name="action_settings">Настройки</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_map">Карта</string>
+    <string name="menu_pay">Способы оплаты</string>
+    <string name="menu_my_booking">Мои бронирования</string>
+    <string name="menu_my_promocodes">Промокоды</string>
+    <string name="menu_howit">Как это работает</string>
+    <string name="detail_menu">Подробно</string>
+    <string name="booking">Бронирование</string>
+    <string name="datetitle">Выбор даты</string>
+    <string name="monthtitle">Выбор месяца</string>
+</resources>

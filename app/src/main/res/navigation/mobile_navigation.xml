@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_map">
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="ru.gross.parksharing.ui.map.MapFragment"
+        android:label="@string/menu_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/nav_detail"
+        android:name="ru.gross.parksharing.ui.detail.DetailFragment"
+        android:label="@string/detail_menu"
+        tools:layout="@layout/fragment_detail">/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_datemodal"
+        android:name="ru.gross.parksharing.ui.datemodal.DateFragment"
+        android:label="@string/datetitle"
+        tools:layout="@layout/fragment_date">/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_monthmodal"
+        android:name="ru.gross.parksharing.ui.monthmodal.MonthFragment"
+        android:label="@string/monthtitle"
+        tools:layout="@layout/fragment_month">/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_booking"
+        android:name="ru.gross.parksharing.ui.booking.BookingFragment"
+        android:label="@string/booking"
+        tools:layout="@layout/fragment_booking" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ru.gross.parksharing.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_my_cars"
+        android:name="ru.gross.parksharing.ui.my_cars.MyCarsFragment"
+        android:label="@string/menu_my_cars"
+        tools:layout="@layout/fragment_my_cars" />
+
+    <fragment
+        android:id="@+id/nav_pay"
+        android:name="ru.gross.parksharing.ui.pay.PayFragment"
+        android:label="@string/menu_pay"
+        tools:layout="@layout/fragment_pay" />
+
+    <fragment
+        android:id="@+id/nav_my_booking"
+        android:name="ru.gross.parksharing.ui.my_booking.MyBookingFragment"
+        android:label="@string/menu_my_booking"
+        tools:layout="@layout/fragment_my_booking" />
+
+    <fragment
+        android:id="@+id/nav_promocodes"
+        android:name="ru.gross.parksharing.ui.promocodes.PromocodesFragment"
+        android:label="@string/menu_my_promocodes"
+        tools:layout="@layout/fragment_promocodes" />
+
+    <fragment
+        android:id="@+id/nav_howit"
+        android:name="ru.gross.parksharing.ui.howit.HowitFragment"
+        android:label="@string/menu_howit"
+        tools:layout="@layout/fragment_howit" />
+</navigation>

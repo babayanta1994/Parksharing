@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_logo_nav"
+            android:visible="false"
+            android:title="@string/menu_map" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/menu_profile" />
+
+        <item
+            android:id="@+id/nav_my_cars"
+            android:icon="@drawable/ic_cars"
+            android:title="@string/menu_my_cars" />
+        <item
+            android:id="@+id/nav_pay"
+            android:icon="@drawable/ic_pay"
+            android:title="@string/menu_pay" />
+
+        <item
+            android:id="@+id/nav_my_booking"
+            android:icon="@drawable/ic_booking"
+            android:title="@string/menu_my_booking" />
+
+        <item
+            android:id="@+id/nav_promocodes"
+            android:icon="@drawable/ic_promocodes"
+            android:title="@string/menu_my_promocodes" />
+
+        <item
+            android:id="@+id/nav_howit"
+            android:icon="@drawable/ic_howto"
+            android:title="@string/menu_howit" />
+
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/ic_support"
+            android:title="Поддержка" />
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="Выход" />
+    </group>
+</menu>
