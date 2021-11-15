@@ -52,13 +52,13 @@ class CalendarAdapter(
                 calendar_cell.dateText.setTextColor(Color.WHITE)
                 if (pos_a.time != Date(0).time && pos_b.time != Date(0).time) {
                     if (!mDateManager.isEqualDates(pos_a,pos_b)) {
-                        if (dateArray[position].time in pos_a.time..pos_b.time) {
+                        if (mDateManager.isBetween(dateArray[position],pos_a,pos_b)) {
                             var draw1 = R.drawable.back_cell_1
                             var draw2 = R.drawable.back_cell_1
                             var draw3 = R.drawable.round_cell
-                            if (pos_a.time == dateArray[position].time) draw1 =
+                            if (mDateManager.isEqualDates(pos_a,dateArray[position])) draw1 =
                                 R.drawable.back_cell_2
-                            else if (pos_b.time == dateArray[position].time) draw2 =
+                            else if (mDateManager.isEqualDates(pos_b,dateArray[position])) draw2 =
                                 R.drawable.back_cell_2
                             else draw3 = R.drawable.round_cell_transparent
 
@@ -67,12 +67,12 @@ class CalendarAdapter(
                             calendar_cell.dateText.setBackgroundResource(draw3)
                         }
                     } else {
-                        if (pos_a.time == dateArray[position].time) {
+                        if (mDateManager.isEqualDates(pos_a,dateArray[position])) {
                             calendar_cell.dateText.setBackgroundResource(R.drawable.round_cell)
                         }
                     }
                 } else {
-                    if (pos_a.time == dateArray[position].time) {
+                    if (mDateManager.isEqualDates(pos_a,dateArray[position]) ) {
                         calendar_cell.dateText.setBackgroundResource(R.drawable.round_cell)
                     }
                 }

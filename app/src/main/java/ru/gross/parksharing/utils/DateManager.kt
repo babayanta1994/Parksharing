@@ -80,6 +80,13 @@ class DateManager {
         val format = SimpleDateFormat("yyyy.MM.d", Locale.US)
         return format.format(date2) == format.format(date1) || date1!!.time>=date2!!.time
     }
+
+    fun isBetween(date: Date?, date1: Date?, date2: Date?): Boolean {
+        val format = SimpleDateFormat("yyyy.MM.d", Locale.US)
+        return format.format(date) == format.format(date1) || format.format(date) == format.format(date2) || date!!.time in date1!!.time..date2!!.time
+    }
+
+
     fun isEqualDates(date1: Date?, date2: Date?): Boolean {
         val format = SimpleDateFormat("yyyy.MM.d", Locale.US)
         return format.format(date2) == format.format(date1)
