@@ -14,4 +14,5 @@
     <string name="booking">Бронирование</string>
     <string name="datetitle">Выбор даты</string>
     <string name="monthtitle">Выбор месяца</string>
+    <string name="user_agreement_privacy_policy">Я согласен с правилами <a href="https://google.com">использования сервиса</a> и <a href="https://google.com">политикой конфиденциальности</a></string>
 </resources>

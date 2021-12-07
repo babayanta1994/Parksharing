@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    tools:context=".ui.datemodal.DateFragment">
+    tools:context=".ui.general_screen.datemodal.DateFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -49,14 +49,19 @@
                         android:layout_weight="1"
                         android:text="Календарь выбор дней"
                         android:textColor="#DADADA" />
-
-                    <ImageView
+                    <LinearLayout
                         android:id="@+id/closemodal"
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:background="@drawable/ic_close"
-                        android:backgroundTint="#296377"
-                        android:clickable="true" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:background="@drawable/ic_close"
+                            android:backgroundTint="#296377"/>
+                    </LinearLayout>
                 </LinearLayout>
 
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.pay.PayFragment">
+    tools:context=".ui.general_screen.pay.PayFragment">
 
     <TextView
         android:id="@+id/text_slideshow"

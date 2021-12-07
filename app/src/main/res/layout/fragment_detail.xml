@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    tools:context=".ui.detail.DetailFragment">
+    tools:context=".ui.general_screen.detail.DetailFragment">
 
 
     <androidx.cardview.widget.CardView
@@ -173,14 +173,14 @@
                     android:id="@+id/bookingBtn"
                     android:elevation="20dp"
                     android:translationZ="40dp"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="35dp"
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/button_booking_detail"
-                    android:text="Забронировать"
                     android:textAllCaps="false"
-                    android:textColor="@color/white" />
+                    android:text="Забронировать" />
 
 
             </LinearLayout>

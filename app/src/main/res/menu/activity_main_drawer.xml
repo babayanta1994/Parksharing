@@ -21,6 +21,7 @@
         <item
             android:id="@+id/nav_pay"
             android:icon="@drawable/ic_pay"
+            android:visible="false"
             android:title="@string/menu_pay" />
 
         <item
@@ -31,16 +32,19 @@
         <item
             android:id="@+id/nav_promocodes"
             android:icon="@drawable/ic_promocodes"
+            android:visible="false"
             android:title="@string/menu_my_promocodes" />
 
         <item
             android:id="@+id/nav_howit"
             android:icon="@drawable/ic_howto"
+            android:visible="false"
             android:title="@string/menu_howit" />
 
         <item
             android:id="@+id/nav_support"
             android:icon="@drawable/ic_support"
+            android:visible="false"
             android:title="Поддержка" />
 
         <item

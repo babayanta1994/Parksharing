@@ -12,14 +12,23 @@
         <item name="android:timePickerStyle">@style/MyTimePickerTheme</item>
 
         <!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
-<!--        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-<!--        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
+        <!--        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>-->
+        <!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
 
     </style>
 
     <style name="MyTimePickerTheme" parent="android:Widget.Material.Light.TimePicker">
         <item name="android:timePickerMode">spinner</item>
     </style>
+
+    <style name="Theme.StatusBarFrag.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.StatusBarFrag.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.StatusBarFrag.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
