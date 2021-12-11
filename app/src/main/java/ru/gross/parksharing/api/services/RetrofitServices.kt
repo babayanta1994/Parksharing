@@ -54,7 +54,7 @@ interface RetrofitServices {
 
 
     @POST("mybookings/current")
-    fun getCurrentBooking(@Body getBookingRequest: GetBookingRequest): Call<MutableList<MyBooking>>
+    fun getCurrentBookings(@Body getBookingRequest: GetBookingRequest): Call<MutableList<MyBooking>>
 
 
 }

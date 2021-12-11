@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ObservableField
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
@@ -40,6 +41,8 @@ import ru.gross.parksharing.components.Placemark
 import ru.gross.parksharing.databinding.ActivityGeneralBinding
 import ru.gross.parksharing.databinding.NavHeaderGeneralBinding
 import ru.gross.parksharing.api.request.CarparksAvailableRequest
+import ru.gross.parksharing.db.ParkDatabase
+import ru.gross.parksharing.db.entity.User
 import ru.gross.parksharing.ui.my_cars_screen.MyCarActivity
 
 
@@ -104,8 +107,7 @@ class GeneralActivity : AppCompatActivity(), ClusterListener, ClusterTapListener
             if (it.itemId == R.id.nav_my_cars) {
                 val intent = Intent(this, MyCarActivity::class.java)
                 startActivity(intent)
-            }
-            else{
+            } else {
                 navController.popBackStack(R.id.nav_map, true)
                 navController.navigate(R.id.nav_map)
                 navController.navigate(it.itemId)
@@ -159,16 +161,23 @@ class GeneralActivity : AppCompatActivity(), ClusterListener, ClusterTapListener
                 this
             )
 
-        getAllParks(
-            CarparksAvailableRequest(
-                Phone = "+79999999999",
-                AppID = "A1B1-C2D2-E3F3-G4H4-I5J5",
-                ID = "K1L1-M2N2-O3P3-Q4R4-S5T5",
-                lat = 99.999999,
-                lon = 99.999999,
-                `when` = "2021-09-30T23:59:59Z"
-            )
-        )
+
+        getUser().observe(this, {
+            if (it != null) {
+                getAllParks(
+                    CarparksAvailableRequest(
+                        Phone = it.Phone,
+                        AppID = it.AppID,
+                        ID = it.ID,
+                        lat = 99.999999,
+                        lon = 99.999999,
+                        `when` = "2021-09-30T23:59:59Z"
+                    )
+                )
+            }
+        })
+
+
 
         binding.appBarGeneral.content.mapview.map.mapObjects.addTapListener(mapObjectTapListener)
         binding.appBarGeneral.content.mapview.map.addTapListener(this)
@@ -184,6 +193,11 @@ class GeneralActivity : AppCompatActivity(), ClusterListener, ClusterTapListener
                 .setAction("Action", null).show()
         }
 
+    }
+
+    fun getUser(): LiveData<User> {
+        val database = ParkDatabase.getDatabase(this)
+        return database.userDao().getUser()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
